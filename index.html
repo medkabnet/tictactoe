@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <h1>New Game</h1>
+    <!-- Default checked -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-2">
+                <p class="text-end">
+                    1 Vs 1
+                </p>
+            </div>
+            <div class="col-2">
+                <div class="form-check form-switch px-4">
+                    <input class="form-check-input w-100 m-0 mt-1" type="checkbox" id="modeGame">
+                </div>
+            </div>
+            <div class="col-2">
+                <p class="text-start">
+                    1 Vs Computer
+                </p>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary new-game" id="newGame">Nouvelle Partie</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary" >Nouveau score</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-3" >
+                <p id="p1"> Player 1</p>
+            </div>
+            <div class="col-2" >
+                <p class="h3" id="s1">
+                    0
+                </p>
+            </div>
+            <div class="col-2" ></div>
+            <div class="col-2" >
+                <p id="s2" class="h3">
+                    0
+                </p>
+            </div>
+            <div class="col-3" >
+                <p id="p2">Player 2</p>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 " id="canvasCOl">
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fin de la parti</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="h2 text-center" id="endGameMsg"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3" >
+                        <p id="mp1"> Player 1</p>
+                    </div>
+                    <div class="col-2" >
+                        <p class="h3" id="ms1">
+                            0
+                        </p>
+                    </div>
+                    <div class="col-2" ></div>
+                    <div class="col-2" >
+                        <p id="ms2" class="h3">
+                            0
+                        </p>
+                    </div>
+                    <div class="col-3" >
+                        <p id="mp2">Player 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary hideModal" >Quitter</button>
+          <button type="button" class="btn btn-primary new-game">Re-jouer</button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="newGamePart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Avertissement</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="h2 text-center" >Voulez-vous commençez une nouvelle partie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary hideModal" >Non</button>
+          <button type="button" class="btn btn-primary startNewGame">Oui</button>
+        </div>
+      </div>
+    </div>
+</div>
+    <script src="./js/game.js"></script>
+</body>
+
+</html>
